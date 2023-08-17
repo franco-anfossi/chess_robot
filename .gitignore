@@ -157,4 +157,18 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+
+# Python bytecode files
+*.pyc
+
+# Virtual environment
+venv/
+# LiveChess2FEN Images
+LiveChess2FEN/data/
+LiveChess2FEN/predictions/
+LiveChess2FEN/cont_predictions/
+LiveChess2FEN/sprites/
+# LiveChess2FEN Trained models
+LiveChess2FEN/selected_models/
+LiveChess2FEN/cpmodels/models/
