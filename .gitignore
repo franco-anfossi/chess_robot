@@ -165,13 +165,13 @@ cython_debug/
 # Virtual environment
 venv/
 
-# Images
-data/
-predictions/
-cont_predictions/
-sprites/
+# LiveChess2FEN Images
+LiveChess2FEN/data/
+LiveChess2FEN/predictions/
+LiveChess2FEN/cont_predictions/
+LiveChess2FEN/sprites/
 
-# Trained models
-selected_models/
-cpmodels/models/
+# LiveChess2FEN Trained models
+LiveChess2FEN/selected_models/
+LiveChess2FEN/cpmodels/models/
 
