@@ -6,23 +6,27 @@ class Movimiento:
 
     def verificar_movimiento(self, board, inicio, final):
         pos_inicial = chess.parse_square(inicio)
+        # Verifica que no haya algun peon coronando, en donde su posicion final es ej: a8q
         if len(final) == 3: 
             pos_final = chess.parse_square(final[:-1])
             pieza_promocion = final[-1]
             promocion = {'q': chess.QUEEN, 'r': chess.ROOK, 
                         'b': chess.BISHOP, 'n': chess.KNIGHT}[pieza_promocion.lower()]
             
+            # Se crea el movimiento con la promocion
             move = chess.Move(pos_inicial, pos_final, promotion=promocion)
         else:
             pos_final = chess.parse_square(final)
             move = chess.Move(pos_inicial, pos_final)
 
+        # Se verifica que el movimiento sea uno de los legales
         if board.is_legal(move):
             board.push(move)
             return True
         else:
             return False
     
+    # Se verifica si hay jaque mate o tablas
     def verificar_jaque_mate(self, board):
         return board.is_checkmate()
     
